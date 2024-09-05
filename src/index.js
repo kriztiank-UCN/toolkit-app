@@ -4,9 +4,12 @@ import "./index.css"
 import App from "./App"
 import { Provider } from "react-redux"
 import { configureStore } from "@reduxjs/toolkit"
+import counterReducer from "./counterState"
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    counter: counterReducer,
+  },
 })
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
